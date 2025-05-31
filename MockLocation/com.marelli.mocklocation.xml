@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.marelli.mocklocation">
+        <permission name="android.permission.ACCESS_COARSE_LOCATION"/>
+        <permission name="android.permission.ACCESS_FINE_LOCATION"/>
+        <permission name="android.permission.ACCESS_MOCK_LOCATION"/>
+        <permission name="android.permission.MANAGE_APP_OPS_MODES"/>
+    </privapp-permissions>
+</permissions>

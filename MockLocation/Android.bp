@@ -1,0 +1,39 @@
+package {
+    // See: http://go/android-license-faq
+    // A large-scale-change added 'default_applicable_licenses' to import
+    // all of the 'license_kinds' from "device_google_atv_license"
+    // to get the below license kinds:
+    //   SPDX-license-identifier-Apache-2.0
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+//prebuilt_etc {
+//    name: "allowed_privapp_com.marelli.mocklocation",
+//    sub_dir: "permissions",
+//    src: "com.marelli.mocklocation.xml",
+//    filename_from_src: true,
+//}
+android_app {
+    name: "MockLocation",
+	
+	manifest: "AndroidManifest.xml",
+    srcs: [
+        "src/**/*.java",
+    ],
+
+    resource_dirs: ["res"],
+	
+	platform_apis: true,
+	
+    //privileged: true,
+    certificate: "platform",
+	
+    static_libs: [
+        "com.google.android.material_material",
+        "androidx-constraintlayout_constraintlayout",
+        "androidx.test.ext.junit",
+        "androidx.test.espresso.core",
+        "drlocation_interface-java"
+    ],
+    //required: ["allowed_privapp_com.marelli.mocklocation"],
+}

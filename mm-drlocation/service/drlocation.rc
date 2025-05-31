@@ -1,0 +1,10 @@
+service drlocation_service /system/bin/drlocation_service
+    class late_start
+    user system
+    group system
+    oneshot
+    disabled
+    seclabel u:r:drlocation_service:s0
+
+on post-fs-data
+    start drlocation_service

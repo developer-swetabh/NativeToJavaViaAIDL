@@ -1,0 +1,18 @@
+aidl_interface {
+    name: "drlocation_interface",
+    srcs: [
+        "com/marelli/drlocation/*.aidl",
+    ],
+    unstable: true,
+    backend: {
+        cpp: {
+            enabled: true,
+        },
+        java: {
+            enabled: true,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+}

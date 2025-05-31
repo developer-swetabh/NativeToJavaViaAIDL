@@ -1,0 +1,24 @@
+
+cc_binary {
+    name: "drlocation_service",
+    srcs: [
+        "src/main.cpp",
+        "src/DrLocationService.cpp",
+    ],
+    local_include_dirs: ["include",],
+    shared_libs: [
+	    "libbase",
+        "libbinder_ndk",
+        "liblog",
+        "libutils",
+        //"drlocation_interface-cpp", // <- pulled from aidl_interface
+    ],
+    static_libs: ["drlocation_interface-ndk"],
+    init_rc: ["drlocation.rc"],
+    cflags: ["-DLOG_TAG=\"DrLocationService\""] + [
+        "-Wall",
+        "-Werror",
+        "-Wunused",
+    ],
+}
+
